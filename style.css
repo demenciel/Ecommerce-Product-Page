@@ -1,0 +1,383 @@
+* {
+    font-family: "Kumbh Sans";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.padding {
+    padding: 0 7.5%;
+}
+
+hr {
+    color: hsl(223, 64%, 98%);
+    width: 100%;
+    height: 20px;
+    padding-bottom: 3.5%;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1.5% 7.5% !important;
+}
+
+.navbar-brand {
+    font-size: 2em !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+}
+
+.nav-item {
+    text-transform: capitalize;
+    margin-right: 1em;
+}
+
+.nav-item a {
+    color: hsl(220, 14%, 75%) !important;
+}
+
+.nav-item a:hover {
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+    overflow: hidden;
+}
+
+.nav-item a:hover {
+    margin-bottom: -3px;
+}
+
+.nav-item {
+    color: hsl(220, 14%, 75%) !important;
+}
+
+.nav-item:hover {
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+    overflow: hidden;
+}
+
+.nav-item:hover {
+    margin-bottom: -3px;
+}
+
+/* Dropdown */
+
+.dropdown-menu {
+    width: 18rem;
+    height: 30vh;
+    position: relative;
+    left: -6rem;
+    margin-top: 1.2rem;
+    box-shadow: 5px 5px 24px 10px rgba(166, 166, 166, 0.77);
+}
+
+.dropdown hr {
+    color: rgba(17, 16, 16, 0.811);
+    padding-bottom: 0%;
+}
+
+.dropdown-header {
+    color: rgba(16, 16, 16, 1);
+    font-weight: 700;
+    font-size: 16px;
+    margin: -6px 0;
+}
+
+
+#img-profile {
+    width: 100%;
+    margin-right: -55px;
+    border-radius: 50%;
+    border: 1.5px solid transparent;
+}
+
+#img-profile:hover {
+    border-radius: 50%;
+    border: 1.5px solid hsl(26, 100%, 55%);
+}
+
+
+
+
+/* Article */
+
+/* Content Images */
+
+.content-wrapper {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-images {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-images img {
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.big-image {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.big-img {
+    width: 73%;
+}
+
+.thumbnails {
+    width: 20%;
+    height: 100%;
+    transition: all .2s ease-in-out
+}
+
+.thumbnails:hover {
+    transform: scale(1.2);
+}
+
+.miniature-images {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* Lightbox */
+.fa-close {
+    position: relative;
+    float: right;
+    color: white;
+    font-size: 2rem;
+    transition: ease 0.6s;
+}
+
+.fa-close:hover {
+    color: hsl(26, 100%, 55%);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.lightbox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(16, 16, 16, 0.5);
+    display: none;
+    justify-content: center;
+}
+
+.lightbox-wrapper {
+    width: 60%;
+    height: 100%;
+    padding: 2% 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    border-radius: 15px !important;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper2 .swiper-wrapper {
+    height: 90%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.swiper-wrapper .thumbnails-swiper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly !important;
+}
+
+.mySwiper .swiper-slide {
+    width: 20%;
+    height: 100%;
+    opacity: 0.8;
+
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    border-radius: 15px;
+    transform: scale(1.1);
+    border: 3px solid hsl(26, 100%, 55%);
+    opacity: 1;
+    transition: transform ease 1s;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content Description */
+
+.content-description {
+    width: 45%;
+    height: 100%;
+
+}
+
+.content-description-wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 7% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-weight: 700 !important;
+    font-size: 85% !important;
+    color: hsl(26, 100%, 55%);
+}
+
+h1 {
+    text-transform: capitalize;
+    font-weight: 700 !important;
+}
+
+.content-description p {
+    color: hsl(219, 9%, 45%);
+}
+
+.price {
+    display: flex;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+}
+
+.real-price {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.discount-price {
+    text-decoration: line-through;
+    color: hsl(220, 14%, 75%);
+}
+
+.discount {
+    width: 65px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: 3%;
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+    border: 5px;
+}
+
+.add-to {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity {
+    background-color: hsl(223, 64%, 98%);
+    padding: 2% 2%;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.quantity i {
+    width: 33%;
+    cursor: pointer;
+    color: hsl(26, 100%, 55%);
+}
+
+.quantity span {
+    width: 33%;
+}
+
+.btn {
+    width: 50%;
+    padding: 2% 0 !important;
+    color: white !important;
+    background-color: hsl(26, 100%, 55%) !important;
+}
+
+.btn i {
+    position: relative;
+    right: 20px;
+}
