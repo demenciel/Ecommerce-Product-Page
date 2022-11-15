@@ -42,7 +42,10 @@ var swiper = new Swiper(".mySwiper4", {
 
 var swiper2 = new Swiper(".mySwiper3", {
     spaceBetween: 10,
-
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
     thumbs: {
         swiper: swiper,
     },
@@ -137,11 +140,9 @@ $('#add-cart').click((e) => {
     var numberItem = parseInt($('#quantity-number').text());
     
     addToCart(numberItem);
+    // reset number item to cart
+    $('#quantity-number').text('0');
 
-    // close dropdown
-    $('#close-dropdown').click(()=> {
-        $('.dropdown-menu').toggle();
-    })
     // delete item in cart
     $('#delete-item').click( () => {
         $('.new-item-cart').remove();
@@ -155,6 +156,25 @@ $('#add-cart').click((e) => {
 
 $('.fa-shopping-cart').click(()=> {
     $('.dropdown-menu').toggle();
+});
+
+// close dropdown
+$('#close-dropdown').click(()=> {
+    $('.dropdown-menu').toggle();
+})
+
+
+
+
+//// mobile
+
+//side menu
+$('.navbar-toggler-icon').on('click', ()=> {
+    $('#my-nav-side').show();
+});
+
+$('.close-side-menu').click(()=> {
+    $('#my-nav-side').hide();
 });
 
 

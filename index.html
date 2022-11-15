@@ -66,13 +66,33 @@
       </div>
     </div>
   </div>
+  <!-- side bar -->
+  <div id="my-nav-side">
+    <button class="close-side-menu"><i class="fa fa-close "></i></button>
+    <ul class="navbar-nav half-hover">
+      <li class="nav-item ">
+        <a class="nav-link" href="#">collections</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">men</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">women</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">about</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">contact</a>
+      </li>
+    </ul>
+  </div>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-    <a class="navbar-brand">sneakers</a>
-    <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <a class="navbar-brand">sneakers</a>
     <div id="my-nav" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto half-hover">
         <li class="nav-item ms-2">
@@ -91,8 +111,9 @@
           <a class="nav-link" href="#">contact</a>
         </li>
       </ul>
+    </div>
 
-      <ul class="navbar-nav ms-auto align-items-center justify-content-end">
+      <ul class="navbar-nav ms-auto flex-row align-items-center justify-content-end">
         <!-- Dropdown Cart -->
         <div class="dropdown nav-item">
           <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
@@ -114,7 +135,7 @@
       </ul>
     </div>
   </nav>
-  <hr>
+  <hr id="nav-hr">
   <!-- article -->
   <article class="padding">
     <div class="content-wrapper">
@@ -136,6 +157,8 @@
               <img src="images/image-product-4.jpg" />
             </div>
           </div>
+          <div class="swiper-button-next swiper-button"></div>
+          <div class="swiper-button-prev swiper-button"></div>
         </div>
         <div thumbsSlider="" class="swiper mySwiper4">
           <div class="swiper-wrapper miniature-images">

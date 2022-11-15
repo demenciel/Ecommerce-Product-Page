@@ -12,21 +12,54 @@ body {
     padding: 0 7.5%;
 }
 
-hr {
-    color: hsl(223, 64%, 98%);
+
+
+#nav-hr {
+    color: hsl(0, 0%, 67%);
     width: 100%;
     height: 20px;
     padding-bottom: 3.5%;
 }
 
 /* Navbar */
+
+#my-nav-side {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+    z-index: 100;
+    flex-direction: column;
+    background-color: white;
+    padding: 5% 5%;
+    font-weight: 700;
+    font-size: 18px;
+    color: rgba(16, 16, 16, 1) !important;
+
+}
+
+#my-nav-side li {
+    margin-bottom: 10%;
+}
+
+.close-side-menu {
+    margin-bottom: 30%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+}
+
+
 .navbar {
     padding: 1.5% 7.5% !important;
 }
 
 .navbar-brand {
-    font-size: 2em !important;
-    font-weight: 700 !important;
+    font-size: 2em ;
+    font-weight: 700 ;
     letter-spacing: 1px;
 }
 
@@ -66,7 +99,7 @@ hr {
 .dropdown-menu {
     width: 20rem;
     height: 34vh;
-    position: relative;
+    position: absolute;
     left: -6rem;
     margin-top: 1.2rem;
     box-shadow: 5px 5px 24px 10px rgba(166, 166, 166, 0.77);
@@ -74,6 +107,10 @@ hr {
     display: none;
     flex-direction: column;
     align-items: center;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
 }
 
 .dropdown hr {
@@ -155,12 +192,7 @@ hr {
 
 .mySwiper3 {
     cursor: zoom-in;
-    height: 100%;
-}
-
-
-.mySwiper3 .swiper-slide img {
-    object-position: center;
+    height: auto;
 }
 
 .mySwiper4 {
@@ -178,9 +210,14 @@ hr {
     align-items: center;
 }
 
+.mySwiper4 .swiper-wrapper {
+    height: 99%;
+    top: 3px;
+}
+
 .mySwiper4 .swiper-slide {
     height: 80%;
-    width: 15% !important;
+    width: auto!important;
 }
 
 .mySwiper4 .swiper-slide-thumb-active {
@@ -468,4 +505,130 @@ h1 {
 
 #cart-icon:hover {
     color: hsl(26, 100%, 55%);
+}
+
+/* ------------------  Mobile ------------------*/
+
+
+@media(max-width: 1000px) {
+    .navbar-toggler {
+        border: transparent;
+    }
+
+    .swiper-wrapper {
+        height: none !important;
+    }
+    
+}
+
+@media(max-width: 860px) {
+
+    .lightbox-wrapper {
+        width: 100%;
+        height: auto;
+    }
+
+    .mySwiper {
+        display: none;
+    }
+
+    .fa-shopping-cart {
+        position: static;
+    }
+
+    .btn i {
+        right: 0;
+    }
+
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
+
+    .dropdown-menu {
+        width: 20rem;
+        height: 34vh;
+        position: absolute;
+        left: -17rem;
+        box-shadow: 5px 5px 24px 10px rgba(166, 166, 166, 0.77);
+        text-align: center;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width: 800px) {
+    body {
+        height: 100vh;
+    }
+
+    article.padding {
+        padding: 0;
+    }
+
+    .navbar {
+        padding: 0 !important;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        height: 50%;
+    }
+
+    .content-images {
+        width: 100%;
+        height: 50%;
+    }
+
+    .content-images .swiper {
+        height: none;
+    }
+
+    .content-description {
+        width: 100%;
+        height: 50%;
+    }
+
+    #nav-hr {
+        padding-bottom: 0;
+        margin: 0;
+        height: 1px;
+    }
+
+    .mySwiper4 {
+        display: none;
+    }
+
+    .add-to {
+        flex-direction: column;
+    }
+
+    .quantity {
+        width: 100%;
+        margin-bottom: 3%;
+        padding: 2% 0 !important;
+    }
+
+    #add-cart {
+        width: 100%;
+        padding: 3% 0 !important;
+
+    }
+
+    .swiper-slide {
+        border-radius: 0px !important;
+    }
+    
+}
+
+@media(max-width:600px) {
+    #my-nav-side {
+        width: 50%;
+    }
+}
+
+@media(max-width:390px) {
+    .navbar-brand {
+        font-size: 1.2em;
+    }
 }
