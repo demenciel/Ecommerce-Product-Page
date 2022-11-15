@@ -68,21 +68,31 @@ function numberOfItem(item) {
 
 numberOfItem();
 
+// add item to cart
+
+var itemInCart = [];
+
 function renderCart(item) {
+
+
+    //create product in cart
     var imageCart = document.querySelector('#product-cart-img');
 
     // node to cart
     var node = document.createElement("div");
+    var priceItem = parseInt()
     node.setAttribute('class', `new-item-cart`);
     node.setAttribute('id', item.id);
 
+
     node.innerHTML = `
         <img id="cart-img" src="${imageCart.src}">
-        <span id="cart-text">
+        <span id="cart-text" class="text-left">
             Fall Limited Edition Sneakers
-            <br>${item.price} x ${item.text}  <b>${item.price * item.text}<b>
+            <br>
+            $${item.price} x ${item.text} <br> <b>$${(item.price) * (item.text)}</b>
         </span>
-        <i id="cart-icon" class="fa fa-trash"></i>
+        <button id='delete-item'><i id="cart-icon" class="fa fa-trash"></i></button>
     `;
 
     var reference = document.querySelector('#dropdown-hr');
@@ -96,28 +106,63 @@ function renderCart(item) {
 
     var referenceButton = document.querySelector('.new-item-cart');
     $(nodeButton).insertAfter(referenceButton)
+
+    itemInCart.push(node);
+
+    // store item in cart
+    // localStorage.setItem('itemInCart', JSON.stringify(itemInCart));
+
 };
-
-
-
 
 
 function addToCart(text) {
     var item = {
         text,
-        price: "$125.00",
+        price: 125,
         id: Date.now(),
     };
     renderCart(item)
 };
 
 
+// audio for cart
+var audio = new Audio('/sound/fx.mp3');
+
+
 $('#add-cart').click((e) => {
     e.preventDefault();
+    audio.play();
+
     // select the text input
-    var numberItem = $('#quantity-number').val();
+    var numberItem = parseInt($('#quantity-number').text());
+    
     addToCart(numberItem);
+
+    // close dropdown
+    $('#close-dropdown').click(()=> {
+        $('.dropdown-menu').toggle();
+    })
+    // delete item in cart
+    $('#delete-item').click( () => {
+        $('.new-item-cart').remove();
+        $('.btn-checkout').remove();
+        //remove cart alert
+        $('#orange-circle').hide();
+    });
+    // cart alert
+    $('#orange-circle').show();
 });
+
+$('.fa-shopping-cart').click(()=> {
+    $('.dropdown-menu').toggle();
+});
+
+
+
+
+
+
+
 
 
 

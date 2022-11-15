@@ -30,7 +30,7 @@
     <div class="lightbox-wrapper">
 
       <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-        <i class="fa fa-close"></i>
+        <i id="close-lightbox" class="fa fa-close"></i>
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="images/image-product-1.jpg" />
@@ -74,7 +74,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="my-nav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto half-hover">
         <li class="nav-item ms-2">
           <a class="nav-link" href="#">collections</a>
         </li>
@@ -95,12 +95,14 @@
       <ul class="navbar-nav ms-auto align-items-center justify-content-end">
         <!-- Dropdown Cart -->
         <div class="dropdown nav-item">
-          <a class="nav-link dropdown-toggle" href="#" role="button" id="" data-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
             <i class="fa fa-shopping-cart"></i>
+            <span id="orange-circle"></span>
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <div class="dropdown-header">
               Cart
+              <i id="close-dropdown" class="fa fa-close"></i>
             </div>
             <hr id="dropdown-hr">
           </div>
@@ -192,7 +194,7 @@
 
 
 
-  
+
 
   <!-- js -->
   <script type="module" src="index.js"></script>
